@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionales</title>
+</head>
+<body>
+    <h1>Condicionales</h1>
+
+    <script>
+        var roi = {
+            nombre: 'Roi',
+            apellido: 'Furies',
+            edad: 16,
+            disenador: true,
+            cocinero: false,
+            cantante: false,
+            dj: false,
+            guitarrista: true,
+            drone: true
+        }
+        var roi2 = {
+            nombre: 'Roi2',
+            apellido: 'Furies',
+            edad: 16,
+            disenador: true,
+            cocinero: false,
+            cantante: false,
+            dj: false,
+            guitarrista: true,
+            drone: true
+        }
+
+        function imprimirProfesiones(persona){
+            console.log(`${persona.nombre} es:`)
+            if(persona.disenador){
+                console.log('Disenador')
+            }else{
+                console.log('No es diseñador')
+            }
+            if(persona.cocinero){
+                console.log('Cocinero')
+            } 
+            else{
+                    console.log('No es Cocinero no cocina ni un huevo')
+                }
+            if(persona.cantante){
+                console.log('Cantante')
+            }
+            else{
+                    console.log('No es cantante, solo en la ducha')
+                }
+            if(persona.dj){
+                console.log('DJ')
+            }
+            else{
+                    console.log('No es DJ')
+                }
+            if(persona.guitarrista){
+                console.log('Guitarrista porque es un marciano')    
+            }else{
+                    console.log('No es')
+                }
+            if(persona.drone){
+                console.log('Vuela Drone')
+            }else{
+                    console.log('No piloto de drone')
+                }      
+        }
+        imprimirProfesiones(roi)
+
+        function retoEdad(persona){
+            if(persona.edad >= 18){
+               alert(`${persona.nombre} es mayor de edad`)
+            } else{
+                alert(`${persona.nombre} no es mayor de edad`)
+            }
+        }
+        retoEdad(roi)
+        retoEdad(roi2)
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

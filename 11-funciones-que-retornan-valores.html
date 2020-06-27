@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionales</title>
+</head>
+<body>
+    <h1>Condicionales</h1>
+
+    <script>
+        var roi = {
+            nombre: 'Roi',
+            apellido: 'Furies',
+            edad: 26,
+            disenador: true,
+            cocinero: false,
+            cantante: false,
+            dj: false,
+            guitarrista: true,
+            drone: true
+        }
+        var roi2 = {
+            nombre: 'Roi2',
+            apellido: 'Furies',
+            edad: 12,
+            
+            
+        }
+
+        function imprimirProfesiones(persona){
+            console.log(`${persona.nombre} es:`)
+            if(persona.disenador){
+                console.log('Disenador')
+            }else{
+                console.log('No es diseñador')
+            }
+            if(persona.cocinero){
+                console.log('Cocinero')
+            } 
+            else{
+                    console.log('No es Cocinero no cocina ni un huevo')
+                }
+            if(persona.cantante){
+                console.log('Cantante')
+            }
+            else{
+                    console.log('No es cantante, solo en la ducha')
+                }
+            if(persona.dj){
+                console.log('DJ')
+            }
+            else{
+                    console.log('No es DJ')
+                }
+            if(persona.guitarrista){
+                console.log('Guitarrista porque es un marciano')    
+            }else{
+                    console.log('No es')
+                }
+            if(persona.drone){
+                console.log('Vuela Drone')
+            }else{
+                    console.log('No piloto de drone')
+                }     
+
+        }
+        const MAYORIA_DE_EDAD = 18 //cuando la variable no va a ser variable sino constante se usa una constante con
+
+        function esMayorDeEdad(persona){
+            return persona.edad >= MAYORIA_DE_EDAD
+        }
+        const x = esMayorDeEdad(persona)
+        function imprimirSiEsMayorDeEdad(persona){
+            if(esMayorDeEdad(persona)){
+               console.log(`${persona.nombre} es mayor de edad`)
+            } else{
+                console.log(`${persona.nombre} no es mayor de edad`)
+            }
+        }
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
+    
+</body>
+</html>

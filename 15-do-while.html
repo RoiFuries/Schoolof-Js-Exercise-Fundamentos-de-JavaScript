@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do While</title>
+</head>
+<body>
+    <h1>Do While</h1>
+    <p>
+        con el do while almenos una vez se va a ejecutar el codigo que esta en el do despues pasa al while y asi 
+    </p>
+    
+    <script>
+
+        // var contador = 0
+        // const llueve = () => Math.random() < 0.25
+
+        const llueve = function llueve (){
+            return Math.random() < 0.25 // porque se traba si quito el return?
+        }
+
+        do {
+            contador++ 
+        } while (!llueve()) {
+            if(contador === 1){
+                console.log(`Fui a ver si llovia ${contador} vez`)
+            } else {
+                console.log(`Fui a ver si llovia ${contador} veces`)
+            }
+        }
+        
+    </script>
+
+
+</body>
+</html>

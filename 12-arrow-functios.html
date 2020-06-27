@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrow</title>
+</head>
+<body>
+    <h1>arrow</h1>
+
+    <script>
+        var roi = {
+            nombre: 'Roi',
+            apellido: 'Furies',
+            edad: 26,
+            disenador: true,
+            cocinero: false,
+            cantante: false,
+            dj: false,
+            guitarrista: true,
+            drone: true
+        }
+        var roi2 = {
+            nombre: 'Roi2',
+            apellido: 'Furies',
+            edad: 12,
+            
+            
+        }
+// pregunta
+    //     const MAYORIA_DE_EDAD = 18 //cuando la variable no va a ser variable sino constante se usa una constante con const
+
+        
+    //    var esMayorDeEdad = function (persona){
+    //         return persona.edad >= MAYORIA_DE_EDAD
+    //     }
+
+    //     function imprimirSiEsMayorDeEdad(persona){
+    //         if(esMayorDeEdad(persona)){
+    //            console.log(`${persona.nombre} es mayor de edad`)
+    //         } else{
+    //             console.log(`${persona.nombre} no es mayor de edad`)
+    //         }
+    //     }
+
+
+
+
+    const MAYORIA_DE_EDAD = 18 //cuando la variable no va a ser variable sino constante se usa una constante con const
+
+        
+        const esMayorDeEdad = (persona) => persona.edad >= MAYORIA_DE_EDAD
+
+        const esMayorDeEdad = ({edad}) => edad >= MAYORIA_DE_EDAD // por que es igual a la de arriba? que significa lo que esta en los corchetes?
+    
+
+        function imprimirSiEsMayorDeEdad(persona){
+            if(esMayorDeEdad(persona)){
+               console.log(`${persona.nombre} es mayor de edad`)
+            } else{
+                console.log(`${persona.nombre} no es mayor de edad`)
+            }
+        }
+        function permitirAcceso(persona){
+            if(!esMayorDeEdad(persona)){
+                alert('acceso denegado')
+            }
+        }
+
+
+        const esMenordeEdad = ({edad}) => edad <= MAYORIA_DE_EDAD
+        function retoPermitirAcceso(persona){
+            if(!esMenordeEdad(persona)){
+                console.log('Pasale')
+            } else{
+                console.log('bye')
+            }
+        }
+
+    </script>
+    
+</body>
+</html>
+    
+</body>
+</html>

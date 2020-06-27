@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Alcance de variable</title>
+</head>
+<body>
+    <p>
+        En esta clase hablaremos del alcance que tienen las funciones. 
+        Si una variable no está definida dentro del cuerpo de una función hablamos de una variable global. 
+        Por el contrario, una variable definida dentro de una función es una variable local.
+    </p> <br>
+    <p>
+        Para que la ejecución de una función no modifique una variable global usamos 
+        parámetros en lugar de pasar directamente la variable.
+    </p>
+    <p>
+        Es posible utilizar el mismo nombre para una variable global y para el parámetro de una función con un alcance local.
+    </p>
+    <script>
+ var nombre = 'Roi';
+        // function imprimirNombreEnMayusculas(n) {
+        //     n = n.toLocaleUpperCase()
+        //     console.log(n)
+        // }
+        // imprimirNombreEnMayusculas(nombre)
+
+        var nombre = 'Roi';
+        function imprimirNombreEnMayusculas(nombre) {
+            nombre = nombre.toLocaleUpperCase()
+            console.log(nombre)
+        }
+        imprimirNombreEnMayusculas(nombre)
+    </script>
+</body>
+</html>

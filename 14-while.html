@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclo For</title>
+</head>
+<body>
+    <h1>Cuclo while</h1>
+    <p>
+        while(){} <br>
+        lo que esta en las llaves se va a repetir siempre que la condicion que esta en los parentecis sea true sies false bye
+    </p>
+   
+    
+    <script>
+        var roi ={
+            nombre: 'Roi',
+            apellido: 'Furies',
+            edad: 27,
+            peso: 70,
+            pesoF: 70
+        }
+
+        var roi2 ={
+            nombre: 'Roi2',
+            apellido: 'Furies2',
+            edad: 17,
+            peso: 40,
+            pesoF: 40
+        }
+
+        // function changuitos1 (persona){
+        //     console.log(`Al inicio del año ${roi.nombre} pesa ${roi.peso.toFixed(2)} kg`);
+        // }
+        console.log(`Al inicio del año ${roi.nombre} pesa ${roi.peso.toFixed(2)} kg`);
+
+        // // This is same as its on line 44
+        // function aumentoDePeso (persona){
+        //     return persona.peso += VARIACION_PESO
+        // }
+
+        const VARIACION_PESO = 0.3
+        const DIAS_ANIO = 365
+       
+        // const d = function m (persona) {
+        //       var j = persona.peso - 3;
+        //     }
+        var dias = 0
+        var dias2 = 0
+
+        const aumentoDePeso = (persona) => persona.peso += VARIACION_PESO
+
+        // this is same  as its on line 50
+        // function bajarDePeso (persona){
+        //     return persona.peso -= 200
+        // }
+        const bajarDePeso = persona => persona.peso -= VARIACION_PESO
+        const COME_MUCHO =() => Math.random() < 0.3
+        const HACE_DEPORTE =() => Math.random() < 0.4
+
+        const META =roi.peso - 3;
+
+
+
+        // function e(persona){
+        //     while(roi.peso > d){
+            
+        //         if(COME_MUCHO()){
+        //             aumentoDePeso(persona)
+
+        //         } if(HACE_DEPORTE()){
+        //             bajarDePeso(persona)
+        //         }
+        //         dias +=1
+        //      }
+        //     console.log(`Pasaron ${e(persona)} dias hasta que ${persona.nombre} adelgaso 3 k`);
+
+        // }
+        while(roi.peso > META){
+            
+            if(COME_MUCHO()){
+                aumentoDePeso(roi)
+
+            } if(HACE_DEPORTE()){
+                bajarDePeso(roi)
+            }
+            dias +=1
+        }
+
+        while(roi2.peso > META){
+            
+            if(COME_MUCHO()){
+                aumentoDePeso(roi)
+
+            } if(HACE_DEPORTE()){
+                bajarDePeso(roi)
+            }
+            dias2 +=1
+        }
+
+             
+        console.log(`Pasaron ${dias} dias hasta que ${roi.nombre} adelgaso 3 k`);
+                    
+        console.log(`Pasaron ${dias} dias hasta que ${roi2.nombre} adelgaso 3 k`);
+
+
+
+        
+
+
+    </script>
+
+</body>
+</html>

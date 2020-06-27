@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+</head>
+<body>
+    <script>
+
+        var roi = {
+            nombre: 'Roi',
+            apellido: 'Furies',
+            edad: 26
+
+        }
+
+        var abs = {
+            nombre: 'Abril',
+            apellido: 'Muguiro',
+            edad: 28
+        }
+// que va en los parentesis y por que??
+        function imprimirNombreEnMayusculas({nombre}) {
+            console.log(nombre.toLocaleUpperCase())
+        }
+        imprimirNombreEnMayusculas(abs)
+        imprimirNombreEnMayusculas(roi)
+        imprimirNombreEnMayusculas({nombre: 'Pepito'})
+    </script>
+    
+</body>
+</html>

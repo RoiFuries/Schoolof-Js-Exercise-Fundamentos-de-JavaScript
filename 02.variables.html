@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02 Variables</title>
+</head>
+<body>
+    <p>
+        <strong>toUpperCase</strong> <br>
+        este es para cambiar el string  mayusculas <br> ej <br>
+        var nombre = 'Roi'
+        var nombreEnMayusculas = nombre.toUpperCase(); <br>
+       resultado en consola ROI
+    </p>
+    <p>
+        <strong>toLowerCase</strong><br>
+        Esto es para ponerlas el string en minusculas <br> Ej <br>
+        var apellido = 'Furies'
+        var apellidoEnMinusculas = apellido.toLowerCase();
+        Resultado en consola furies
+    </p>
+    <p>
+        <strong>charAt</strong> <br>
+         si queremos saber cual es el primer caracter de un sting usasmo chart <br>
+         Ej <br>
+         var primeraLetraDelNombre = nombre.charAt(0);
+         <br> resultado R
+    </p>
+    <p>
+        <strong>Cantidas de letras en el string</strong> <br>
+        este es para saber la cantidad de caracteres en el string
+    </p>
+    <p>
+        <strong>str</strong> bre
+        no tenemos imaginacion para ponerle un nombre a una variable utilizamos str
+    </p>
+    <br>
+    <p>
+        <strong>interpolacion</strong>
+        esto es para concatenar un variables  de una mejor forma y seuna comilla invertida y el signo de pesos y dentro el nombre de la variable
+    </p>
+<!-- <script src="./02.variables.js"></script> -->
+    <script>
+
+        var nombre = 'Roi'
+        var apellido = 'Furies'
+
+        var nombreEnMayusculas = nombre.toUpperCase();
+        var apellidoEnMinusculas = apellido.toLowerCase();
+        var primeraLetraDelNombre = nombre.charAt(0);
+        var ultimaLetraDelNombre = nombre.charAt(2);
+        var cantidadDeLetrasDelNombre = nombre.length;
+        var nombreCompleto = nombre + ' ' + apellido;
+        var nombreCompletoInterpolacion = `${nombre} ${apellido.toLocaleUpperCase()}`
+
+        var str = apellido.substr(1, 4);
+
+        var us = 'Pancho'
+        var nose = us.charAt(us.length-1)
+        console.log(nose)
+    </script>
+
+</body>
+</html>

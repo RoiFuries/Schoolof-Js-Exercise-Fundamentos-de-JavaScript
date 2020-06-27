@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclo For</title>
+</head>
+<body>
+    <h1>Cuclo For</h1>
+    <p>
+        Realiza cierta tareas de manera repetitiva dicertas ocaciones
+        cada vez que aumenta aumenta 200 gr
+    </p>
+    <p>
+        para escribir el for tenemos que escribir "for() {}" entre las  
+        llaves va el codigo que queremos que se repita cada dia. <br>
+        Y entre los parentesis van tres cosas: <br>
+        1.- <strong>Inicio</strong><br>
+        2.- <strong>Condición</strong> <br>
+        3.- <strong>Incremento</strong> <br>
+    </p>
+    
+    <script>
+        var roi ={
+            nombre: 'Roi',
+            apellido: 'Furies',
+            edad: 27,
+            peso: 70,
+            pesoF: 70
+        }
+
+        var roi2 ={
+            nombre: 'Roi2',
+            apellido: 'Furies2',
+            edad: 17,
+            peso: 40
+        }
+
+        // function changuitos1 (persona){
+        //     console.log(`Al inicio del año ${roi.nombre} pesa ${roi.peso.toFixed(2)} kg`);
+        // }
+        // console.log(`Al inicio del año ${roi.nombre} pesa ${roi.peso.toFixed(2)} kg`);
+
+        // // This is same as its on line 44
+        // function aumentoDePeso (persona){
+        //     return persona.peso += VARIACION_PESO
+        // }
+
+        const VARIACION_PESO = 0.20
+        const aumentoDePeso = (persona) => persona.pesoF += VARIACION_PESO
+
+        // this is same  as its on line 50
+        // function bajarDePeso (persona){
+        //     return persona.peso -= 200
+        // }
+        const bajarDePeso = persona => persona.pesoF -= VARIACION_PESO
+
+            for(var i = 1; i <= 365; i++ ){
+                var random = Math.random()
+                if(random < 0.25) {
+                     aumentoDePeso(roi) //si sucede esto el usuario sube de peso
+                } else if (random < 0.50){
+                    bajarDePeso(roi) //si sucede esto el usuario baja de peso
+                }
+                console.log(`En el día  ${i} ${roi.nombre} pesa ${roi.pesoF.toFixed(2)} kg` )
+                        
+                
+            }
+
+        
+        // function changuitos (personan){
+        //     console.log(`Al final del año ${roi.nombre} peso ${roi.peso.toFixed(2)} kg` )
+
+        // }
+        console.log(`Al inicio del año ${roi.nombre} pesa ${roi.peso.toFixed(2)} kg`);
+
+        console.log(`Al final del año ${roi.nombre} peso ${roi.pesoF.toFixed(2)} kg` )
+
+
+        
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desestructurar Elementos</title>
+</head>
+<body>
+    <script>
+
+        var roi = {
+            nombre: 'Roi',
+            apellido: 'Furies',
+            edad: 26
+
+        }
+
+        var abs = {
+            nombre: 'Abril',
+            apellido: 'Muguiro',
+            edad: 28
+        }
+// que va en los parentesis y por que??
+        function imprimirNombreEnMayusculas(persona) {
+            // var nombre = persona.nombre
+            // no entiendo que pasa osea que pesona es roi o abril
+            var { nombre } = persona
+            console.log(nombre.toLocaleUpperCase())
+        }
+        imprimirNombreEnMayusculas(abs)
+        imprimirNombreEnMayusculas(roi)
+
+        function reto(persona){
+            var {nombre} = persona
+            var edad = persona.edad
+            console.log(`Hola me llamo ${nombre} y tengo ${edad} años`);
+        }
+        reto(abs)
+        reto(roi)
+    </script>
+    
+</body> 
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    
+    <script>
+
+var david={
+    nombre: 'David',
+    apellido: 'Baez',
+    altura: 1.70
+}
+
+var diana={
+    nombre: 'Diana',
+    apellido: 'Osorio',
+    altura: 1.65
+}
+
+var isabela={
+    nombre: 'Isabela',
+    apellido: 'Baez',
+    altura: 1.35
+}
+
+var ana={
+    nombre: 'Ana Maria',
+    apellido: 'Baez',
+    altura: 1.45
+}
+
+var andres={
+    nombre: 'Andres',
+    apellido: 'Baez',
+    altura: 1.80
+}
+
+var antonio={
+    nombre: 'Antonio',
+    apellido: 'Baez',
+    altura: 1.68
+}
+
+var personas = [david, diana, isabela, ana, andres, antonio]
+for (var s = 0; s < personas.length; s++){
+    var persona = personas[s]
+    console.log(`${persona.nombre} mide ${persona.altura} mts.`)
+}
+
+
+    </script>
+
+<h1>Arrays</h1>
+<p>
+    Los arrays son estructuras que nos permiten organizar elementos dentro de una collección. 
+    <br> Estos elementos pueden ser números, strings, booleanos, objetos, etc.
+</p>
+
+<p>
+    para llamarlos haces una variable le das un nombre y abres corchetes y dento  pones los elementos del array 
+    <br>
+    en este caso pusbimos las variables de las personas osean eraan unos objetos.
+    tambien hicimos un ciclo for que va a recorrer el tamano del array y va a impromor 
+    <br> persona.nombre mide persona.altura mts. y va a subir uno y despues otro peroes menos al latgo del array
+</p>
+</body>
+</html>
