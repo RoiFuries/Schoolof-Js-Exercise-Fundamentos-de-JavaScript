@@ -44,14 +44,33 @@ var antonio={
     apellido: 'Baez',
     altura: 1.88
 }
-const esAlta = (persona) => {
-    return persona.altura > 1.8;
-}
+// const esAlta = (persona) => {
+//     return persona.altura > 1.8;
+// }
+// esto es lo mismo que  arriba y que abajo.
+
+const esAlta = persona => persona.altura > 1.8;
+const esBaja = ({altura}) => altura < 1.8;
+
+// ahora tambén podemos desglosar y ahora si necesitamos los parentesis y le decimos que vamos 
+// acceder a la altura
+// const esAlta = ({altura}) => altura > 1.8;
+
+
+// tambien lo podriamos poner dentro del filter. haces una function anonima
+// como aqui abajo pero segun el profesor es mejor tener separada la funcion del filter 
+// var personasAltas = personas.filter(function (persona){
+//     return persona.altura > 1.8
+// })
+
+
 var personas = [david, diana, isabela, ana, andres, antonio]
 
 var personasAltas = personas.filter(esAlta)
 console.log(personasAltas)
 
+var personasBajas = personas.filter(esBaja)
+console.log(personasBajas)
 
 
 
