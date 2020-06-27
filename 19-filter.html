@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+</head>
+<body>
+    
+    <script>
+
+var david={
+    nombre: 'David',
+    apellido: 'Baez',
+    altura: 1.70
+}
+
+var diana={
+    nombre: 'Diana',
+    apellido: 'Osorio',
+    altura: 1.85
+}
+
+var isabela={
+    nombre: 'Isabela',
+    apellido: 'Baez',
+    altura: 1.35
+}
+
+var ana={
+    nombre: 'Ana Maria',
+    apellido: 'Baez',
+    altura: 1.45
+}
+
+var andres={
+    nombre: 'Andres',
+    apellido: 'Baez',
+    altura: 1.80
+}
+
+var antonio={
+    nombre: 'Antonio',
+    apellido: 'Baez',
+    altura: 1.88
+}
+const esAlta = (persona) => {
+    return persona.altura > 1.8;
+}
+var personas = [david, diana, isabela, ana, andres, antonio]
+
+var personasAltas = personas.filter(esAlta)
+console.log(personasAltas)
+
+
+
+
+    </script>
+
+<h1>Filter</h1>
+<p>
+    Con .filter podemos filtar ciertos elementos del array <br>
+    en este caos pusimos persona.filter (esAlta) donde esAlta <br>
+    es una arrow function en una constante que va a regresar solo a las personas que tengan perso.altura mayor a 1.80
+</p>
+
+
+</body>
+</html>
