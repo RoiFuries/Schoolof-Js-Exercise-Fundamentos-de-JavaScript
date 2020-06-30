@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+</head>
+<body>
+    
+    <script>
+
+var david={
+    nombre: 'David',
+    apellido: 'Baez',
+    altura: 1.70,
+    cantidadDeLibros: 111,
+}
+
+var diana={
+    nombre: 'Diana',
+    apellido: 'Osorio',
+    altura: 1.85,
+    cantidadDeLibros: 76
+}
+
+var isabela={
+    nombre: 'Isabela',
+    apellido: 'Baez',
+    altura: 1.35,
+    cantidadDeLibros: 21
+}
+
+var ana={
+    nombre: 'Ana Maria',
+    apellido: 'Baez',
+    altura: 1.45,
+    cantidadDeLibros: 132
+}
+
+var andres={
+    nombre: 'Andres',
+    apellido: 'Baez',
+    altura: 1.80,
+    cantidadDeLibros: 43
+}
+
+var antonio={
+    nombre: 'Antonio',
+    apellido: 'Baez',
+    altura: 1.88,
+    cantidadDeLibros: 99
+}
+
+
+var personas = [david, diana, isabela, ana, andres, antonio]
+
+
+
+
+// en esta funcion va a pisar el objeto  inicial por el retur abajo hare la forma correcta para que no lo pise 
+// const pasarAlturasACms = persona => {
+//     // persona.altura = persona.altura * 100
+//     //esto de arriba es lo mismo que bajo
+//     persona.altura *= 100
+//     return persona // porqur aqui puse el return despues y no asi return persona.altura *= 100. en que cambia?
+// }
+
+// // esto esta bien pero si solo vamos a retornar un objeto podemos quitar el return
+// // y poner lo que vamos a retornar en parentecis como lo hare abajo
+// 
+// const pasarAlturasACms = persona => {
+//     return {
+//         ...persona,
+//         altura: persona.altura * 100
+//     } 
+// }
+
+const pasarAlturasACms = persona => ({
+        ...persona,
+        altura: persona.altura * 100
+    })
+
+
+var personasCms = personas.map(pasarAlturasACms)
+console.log(personasCms)
+
+
+
+
+var booksAcumulados = 0;
+
+for (var i = 0; i < personas.length; i++){
+    booksAcumulados = booksAcumulados + personas[i].cantidadDeLibros 
+}
+console.log(`En total tienen ${booksAcumulados} entre todos, y esto se hizo con un for`)
+
+// // esto es igual al de abajo solo que el de abajo esta imlificada su ecritura
+// const reducer = (acum, persona) => {
+//     return acum + persona.cantidadDeLibros
+// }
+
+
+const reducer = (acum, {cantidadDeLibros}) => acum + cantidadDeLibros // aqui desetructuramos a la persona quitando persona
+// y solo poniendo lo que nos interesa en llaves en este caso {cantidadDeLibros} y despues de la flecha quitamos persona
+// de persona.cantidadDeLibros porque ya lo desesturcturamos
+
+
+var totalDeLibros = personas.reduce(reducer, 0)
+console.log(`En total tienen ${totalDeLibros} entre todos, y esto se hizo con un reduce`)
+
+
+
+    </script>
+
+<h1>Reduce</h1>
+<p>
+    El método reduce() nos permite reducir, mediante una función que se aplica a cada uno de los elemento  <br>
+    del array, todos los elementos de dicho array, a un valor único. <br>
+   reduce hace  reducir un array a un valor unico
+</p>
+<p>
+    lo que queremos hacer es sacar la cuenta total de cuantos libros hay en total <br>
+    se puede hacer con un for
+</p>
+
+
+
+</body>
+</html>
