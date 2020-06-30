@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+</head>
+<body>
+    
+    <script>
+
+var david={
+    nombre: 'David',
+    apellido: 'Baez',
+    altura: 1.70
+}
+
+var diana={
+    nombre: 'Diana',
+    apellido: 'Osorio',
+    altura: 1.85
+}
+
+var isabela={
+    nombre: 'Isabela',
+    apellido: 'Baez',
+    altura: 1.35
+}
+
+var ana={
+    nombre: 'Ana Maria',
+    apellido: 'Baez',
+    altura: 1.45
+}
+
+var andres={
+    nombre: 'Andres',
+    apellido: 'Baez',
+    altura: 1.80
+}
+
+var antonio={
+    nombre: 'Antonio',
+    apellido: 'Baez',
+    altura: 1.88
+}
+
+
+var personas = [david, diana, isabela, ana, andres, antonio]
+
+
+
+
+// en esta funcion va a pisar el objeto  inicial por el retur abajo hare la forma correcta para que no lo pise 
+// const pasarAlturasACms = persona => {
+//     // persona.altura = persona.altura * 100
+//     //esto de arriba es lo mismo que bajo
+//     persona.altura *= 100
+//     return persona // porqur aqui puse el return despues y no asi return persona.altura *= 100. en que cambia?
+// }
+
+// // esto esta bien pero si solo vamos a retornar un objeto podemos quitar el return
+// // y poner lo que vamos a retornar en parentecis como lo hare abajo
+// 
+// const pasarAlturasACms = persona => {
+//     return {
+//         ...persona,
+//         altura: persona.altura * 100
+//     } 
+// }
+
+const pasarAlturasACms = persona => ({
+        ...persona,
+        altura: persona.altura * 100
+    })
+
+
+var personasCms = personas.map(pasarAlturasACms)
+
+
+
+console.log(personasCms)
+
+    </script>
+
+<h1>Map</h1>
+<p>
+    En esta clase veremos cómo transformar un array. El método map() itera sobre los elementos de 
+    <br>
+    un array en el orden de inserción y devuelve array nuevo con los elementos modificados.
+    <br>
+    <strong>Recordemos que MAP siempre nos devuelve un nuevo array! no modifica. pero si se modifica cada uno de los elementos esa modificacion perdura</strong>
+</p>
+<p>
+    En el video si se modifico el array personas pero no por .map si no por la función <br> <br>
+
+const pasarAlturasACms = persona => { <br>
+    persona.altura *= 100 <br>
+    return persona  <br>
+} <br>
+<br>
+Entonces para que no modifique el primer array en lugar de retornar “persona” retorna un nuevo objeto con la persona desglosada 
+y pisa la altura de persona y ahi es donde pone la multiplicación. <br>
+<br>
+const pasarAlturasACms = persona => { <br>
+    return { <br>
+        ...persona, <br>
+        altura: persona.altura *= 100 <br>
+
+    }  <br>
+} <br> <br>
+Y así es que es un nuevo objeto. o es lo que yo entendí.
+</p>
+
+
+</body>
+</html>
