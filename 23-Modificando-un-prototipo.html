@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Modificando un prototipo</title>
+</head>
+<body>
+    
+
+
+
+<script>
+    function Personas (nombre, apellido, altura){
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.altura = altura;
+    }
+
+
+    Personas.prototype.saludar = function (){
+        console.log(`Hola me llamo ${this.nombre}`)
+    }
+
+    Personas.prototype.reto = function (){
+        if(this.altura > 169){
+            console.log(`Hola me llamo ${this.nombre} ${this.apellido}, mido ${this.altura}cm. y soy una persona alta`)
+        } else{
+            console.log(`Hola me llamo ${this.nombre} ${this.apellido}, mido ${this.altura}cm. y soy una persona baja`)
+        }
+    }
+
+    Personas.prototype.soyAlto = function () => this.altura > 180
+
+
+
+
+
+    var royis = new Personas ('Roi', 'Furies', 187)
+    var carls = new Personas('Carlos', 'Fuentes', 150)
+    var aura = new Personas ('Aura', 'Fuentes', 170)
+
+
+    royis.saludar()
+    carls.saludar()
+    aura.saludar()
+
+    royis.reto()
+    carls.reto()
+    aura.reto()
+
+
+
+
+
+
+
+
+
+</script>
+    
+<h1>
+    Modificando un prototipo
+</h1>
+<p>
+    En esta clase veremos cómo se modifican las clases de herencias. JavaScript funciona con una estructura orientada a objetos y cada objeto tiene una propiedad privada que mantiene un enlace a otro objeto llamado prototipo.
+
+
+</p>
+
+</body>
+</html>
