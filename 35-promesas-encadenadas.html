@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promesas Encadenadas
+    </title>
+</head>
+<body>
+    <script>
+      const API_URL = 'https://swapi.dev/api/'
+      const PEOPLE_URL = 'people/:id'
+      const opts = {crossDomanin: true}
+
+      function obtenerPersonaje(id){
+          return new Promise((resolve, reject) =>{
+            const url = `${API_URL}${PEOPLE_URL.replace(':id',id)}`
+            $
+            .get(url, opts, function (data){
+              resolve (data)
+            })
+            .fail(()=> reject(id))
+
+          })
+      }
+      
+    //   function onError(id){
+    //     console.log(`sucedio un error al obtener el personaje ${id}`)
+    //   }
+    const onError = (id) => console.log(`Ocurrio un error y no se pudo obtener al personaje ${id}`);
+
+
+      obtenerPersonaje(1)
+        .then(personaje1 => {
+          console.log(`El personaje 1 es ${personaje1.name}`)
+          return obtenerPersonaje(2)
+        })
+        .then(personaje2 => {
+          console.log(`El personaje 2 es ${personaje2.name}`)
+          return obtenerPersonaje(3)
+        })
+        .then(personaje3 => {
+          console.log(`El personaje 3 es ${personaje3.name}`)
+          return obtenerPersonaje(4)
+        })
+        .then(personaje4 => {
+          console.log(`El personaje 4 es ${personaje4.name}`)
+          return obtenerPersonaje(5)
+        })
+        .then(personaje5 => {
+          console.log(`El personaje 5 es ${personaje5.name}`)
+          return obtenerPersonaje(6)
+        })
+        .then(personaje6 => {
+          console.log(`El personaje 6 es ${personaje6.name}`)
+          return obtenerPersonaje(7)
+        })
+        .then(personaje7 => {
+          console.log(`El personaje 6 es ${personaje6.name}`)
+        })
+        
+       
+
+        .catch(onError)
+
+
+    </script>
+    <h1>Promesas Encadenadas    </h1>
+    <p>
+        A diferencia de los callbacks en el CallbackHell, que terminan estando anidados unos dentro de otros,  <br>
+        cuando se usan Promesas la ejecución de las llamadas no se hacen de manera anidada sino de manera  <br>
+        encadenada, al mismo nivel una debajo de la otra, lo que hace que el código sea mucho más legible y mantenible. <br>
+    </p>
+    <a href="https://platzi.com/clases/1339-fundamentos-javascript/12964-promesas-encadenad-2/">Ver Clase</a>
+
+</body>
+</html>
