@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Clases Js</title>
+</head>
+<body>
+    
+
+
+
+<script>
+
+    class Persona {
+        constructor(nombre, apellido, altura){
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.altura = altura;
+        }
+        saludar (fn){
+            var {nombre, apellido} = this
+
+            console.log(`Hola me llamo ${nombre} ${apellido} y vivo en la class persona`)
+            if(fn){
+                fn(this.nombre, apellido)
+            }
+        }
+        soyAlto(){
+            return this.altura > 180
+        }
+        reto(){
+            if(this.altura > 169){
+                console.log(`Hola me llamo ${this.nombre} ${this.apellido}, mido ${this.altura}cm. y soy una persona alta`)
+            } else{
+                console.log(`Hola me llamo ${this.nombre} ${this.apellido}, mido ${this.altura}cm. y soy una persona baja`)
+            }
+        }
+    }
+
+    
+
+   
+    class Desarrollador extends Persona {
+        
+        constructor(nombre, apellido, altura){
+            super(nombre, apellido, altura) // no podemos utilizar this aqui adentro hasta que no hayamos llamado al constructor de la clase padre
+        // por eso ponemos super y ya nos sobrn los this de abajo que estan cometados
+        // this.nombre = nombre;
+        // this.apellido = apellido;
+        // this.altura = altura;
+        }
+
+        saludar(fn){
+            //var nombre = this.nombre
+            // var apellido = this.apellido
+            // esto es equivaleente a aqui abajo
+            var {nombre, apellido} = this
+            console.log(`Hola me llamano ${nombre} ${apellido} y soy dev`)
+            if(fn){
+                fn(nombre, apellido, true)
+            }
+        }
+    }
+
+    function responderSaludo(nombre, apellido, esDev) {
+        console.log(`whats up ${nombre} ${apellido}`)
+        if (esDev) {
+            console.log (`baia baia tacubaia I didn't know you were a developer`)
+        }
+    }
+
+
+    var royis = new Persona ('Roi', 'Furies', 187)
+    var carls = new Persona('Carlos', 'Fuentes', 150)
+    var aura = new Desarrollador ('Aura', 'Fuentes', 170)
+
+
+    royis.saludar()
+    carls.saludar(responderSaludo)
+    aura.saludar(responderSaludo)
+
+    // royis.reto()
+    // carls.reto()
+    // aura.reto()
+
+    // royis.soyAlto()
+    // carls.soyAlto()
+    // aura.soyAlto()
+
+    
+
+
+
+
+</script>
+    
+<h1>Clases Js</h1>
+<p>
+Apartir del año 2015 Js se va actualizando año con año.
+</p>
+<br>
+<h3>
+    Esto es la forma resumida de todas las clases de los prototipos en JS
+</h3>
+<p>
+    Las clases de JavaScript son introducidas en el ECMAScript 2015 y son una mejora en la sintaxis sobre la 
+    herencia basada en prototipos de JavaScript. <br>
+    La palabra clave extends se usa en declaraciones de clase o expresiones de clase para crear una clase 
+    que es hija de otra clase <br>
+    El método constructor es un método especial para crear e inicializar un objeto creado a partir de una clase.
+</p>
+
+</body>
+</html>
