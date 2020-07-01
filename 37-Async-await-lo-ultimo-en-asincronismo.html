@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async-await: lo último en asincronismo </title>
+</head>
+<body>
+    <script>
+      const API_URL = 'https://swapi.dev/api/' //ok
+      const PEOPLE_URL = 'people/:id'
+      const opts = {crossDomanin: true}
+
+      function obtenerPersonaje (id){
+          return new Promise((resolve, reject) =>{
+            const url = `${API_URL}${PEOPLE_URL.replace(':id',id)}`
+            
+            $
+            .get(url, opts, function (data){
+              resolve (data)
+            })
+            .fail(() => reject(id))
+          })
+      }
+      
+    //   function onError(id){
+    //     console.log(`sucedio un error al obtener el personaje ${id}`)
+    //   }
+      const onError = (id) => console.table(`Ocurrio un error y no se pudo obtener al personaje ${id}`);
+
+
+      async function obtenerPersonajes (){
+        var ids = [1,2,3,4,5,6,7]
+        var promesas = ids.map( id => obtenerPersonaje(id))
+        try{
+            var personajes = await Promise.all(promesas)
+            console.log(personajes)
+        } catch (id){
+            onError(id)
+        }
+      }
+      obtenerPersonajes()
+
+        
+
+
+
+    </script>
+    <h1> Async-await: lo último en asincronismo    </h1>
+    <p>
+        Async-await es la manera más simple y clara de realizar tareas asíncronas. Await detiene la <br>
+        ejecución del programa hasta que todas las promesas sean resueltas. Para poder utilizar esta <br>
+        forma, hay que colocar async antes de la definición de la función, y encerrar el llamado a <br>
+        Promises.all() dentro de un bloque try … catch.
+
+
+    </p>
+    <a href="https://platzi.com/clases/1339-fundamentos-javascript/12966-async-await-lo-ultimo-en-asincronis-9/">Ver Clase</a>
+
+</body>
+</html>
