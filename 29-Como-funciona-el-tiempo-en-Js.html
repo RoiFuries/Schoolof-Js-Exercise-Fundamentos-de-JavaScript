@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo funciona el tiempo en JavaScript
+    </title>
+</head>
+<body>
+    <h1>Cómo funciona el tiempo en JavaScript    </h1>
+    <p>
+        En principio, cualquier tarea que se haya delegado al navegador a través de un callback, <br>
+        deberá esperar hasta que todas las instrucciones del programa principal se hayan ejecutado.<br>
+         Por esta razón el tiempo de espera definido en funciones como setTimeout, no garantizan que <br>
+         el callback se ejecute en ese tiempo exactamente, sino en cualquier momento a partir de allí, <br>
+         sólo cuando la cola de tareas se haya vaciado.
+
+
+    </p>
+    <a href="https://platzi.com/clases/1339-fundamentos-javascript/12958-como-funciona-el-tiempo-en-javascript/">Ver Clase</a>
+
+    <script>
+        // console.log('a');
+        // setTimeout(() => console.log('b'), 0)
+        // // setTimeout(function(){
+        // //     console.log('b');
+        // // }, 2000)
+        // console.log('c');
+
+        setTimeout(()=> console.log('d'), 2000)
+        for (var i = 0; i < 1000000000; i++){
+
+        }
+
+
+
+    </script>
+
+</body>
+</html>
