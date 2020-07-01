@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Hace cuántos días naciste?
+    </title>
+</head>
+<body>
+<script>
+    function diasEntreFechas(fecha1, fecha2){
+        //Cuantos milisegundos hay en un dia
+        const unDia = 1000 * 60 * 60 * 24
+        //Convierte el numero en positivo, nos dara milisegundos
+        const diferencia = Math.abs(fecha1 - fecha2)
+
+        //Para redondear para abajo
+        returnMath.floor(diferencia / unDia)
+    }
+
+    const hoy = newDate () //Tendra fecha actual por defecto
+    const nacimiento = newDate(1991, 9 , 16) //Formato es YYYY,M, DD. El mes empieza Enero = 0 y asi
+
+    console.log(diasEntreFechas(hoy, nacimiento))
+</script>
+<h1>¿Hace cuántos días naciste?</h1>
+
+<p>
+    Con variables de tipo Date, se pueden realizar operaciones de suma y resta similares a las  <br>
+     que se realizan con números. El resultado que se obtiene está en milisegundos, por lo que  <br>
+     luego hay que hacer algunas operaciones adicionales para llevarlos a días, meses o años  <br>
+     según queramos. También aplica para Horas, Minutos, Segundos y Milisegundos. <br>
+</p>
+
+
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">MDN</a> <br>
+<a href="https://platzi.com/comentario/1424763/">Fuente Script</a> <br>
+<a href="https://platzi.com/clases/1339-fundamentos-javascript/12975-hace-cuantos-dias-naciste/">Ver Clase</a> <br>
+
+
+</body>
+</html>

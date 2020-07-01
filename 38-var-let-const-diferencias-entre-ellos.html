@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var, let y const: las diferencias entre ellos</title>
+</head>
+<body>
+
+    <script>
+        // scope global - disponible en todos los scopes
+        var sacha = "sacha1"
+
+        function miFuncion() {
+            // empieza scope miFuncion
+
+            if (true) {
+                // empieza scope if
+
+                var sacha = "sacha2";
+                // se declara dentro del scope miFunción
+                // está disponible desde el inicio de la función
+                // tendrá valor undefined hasta ejecutarse esta linea
+                // dejará de estar disponible cuando termine el scope miFuncion
+
+                let sacha2 = "sacha3";
+                const sacha3 = "sacha4";
+                // se declaran dentro del scope if
+                // están disponibles a partir de esta línea con el valor asignado
+                // dejan de estar disponibles cuando termine el scope if
+
+                // termina scope if
+                // los datos declarados con let y constdentro del scope if dejan de existir
+            }
+            if (true) {
+                // inicia scope if 2
+
+                let sacha = "sacha5";
+                let sacha2;
+                console.log(sacha, sacha2);
+                // imprimirá: sacha5 undefined
+                // a pesar de haber tres sacha declaradas
+                // (scope global, scope miFunción, scope if 2)
+                // console.log tomará la declarada en el scope más cercano
+                // (scope if 2 - este)
+                // sacha2 no existe en ningún otro scope
+                // en este (if 2) fue declarade más no definida
+                // por lo que su valor es undefined
+
+                // termina scope if 2
+                // los datos declarados con let y const dentro del scope if 2 dejan de existir
+            }
+            console.log(sacha);
+            // imprimirá: sacha2 (declarada en scope miFunción, inicializada en scope if)
+
+            // termina scope miFunción
+            // los datos declarados con let, const y var dentro del scope miFunción dejan de existir
+        }
+
+        console.log(sacha);
+        // imprimirá: sacha1
+
+
+
+
+
+
+    </script>
+    <a href="https://platzi.com/clases/1339-fundamentos-javascript/12974-var-let-y-const-las-diferencias-entre-ellos/"> <h1>var, let y const: las diferencias entre ellos</h1></a>
+   
+    <p>““var”” es la manera más antigua de declarar variables. No es muy estricta en cuanto al alcance,  <br>
+        ya que al declarar variables de esta forma, dichas variables podrán ser accedidas, e incluso  <br>
+        modificaddas, tanto dentro como fuera de los bloques internos en una función. <br>
+
+    </p>
+    <p>Con ““let”” por otra parte, el alcance se reduce al bloque (las llaves) en el cual la variable fue  <br>
+        declarada. Fuera de este bloque la variable no existe. Una vez declarada la variable con let, no  <br>
+        se puede volver a declarar con en ninguna otra parte de la función. <br>
+    </p>
+    <p>““const”” al igual que ““let”” se define en el contexto o alcance de un bloque, a diferencia de let <br> 
+        y var, las varibles definidas como constantes (const), ya no podrán ser modificadas ni declaradas  <br>
+        nuevamente, en ninguna otra parte de la función o el contexto en el que ya existen. <br>
+    </p>
+    <p>
+        La recomendación es reducir siempre al mínimo el alcance de nuestras variables, por lo que se debe  <br>
+        usar let en lugar de var mientras sea posible. <br>
+    </p>
+    <h2>Scopes</h2>
+    <a href="https://platzi.com/comentario/1385912/">Aporte de CovCg</a> <br>
+    <p>
+        
+        <strong>scope local:</strong> es el bloque en que se está ejecutando una instrucción. <br>
+        <strong>scope de una función:</strong> es el bloque que está delimitado por una función. <br>
+        <strong>scope global:</strong> es el que está accesible sin importar en qué bloque se esté. <br>
+        Todos los scope pueden tener otros scopes dentro
+    </p><br>
+    <p>
+        <strong>var:</strong> se declara en el scope de la función con valor undefined, se inicializa al momento de  <br>
+        ejecutarse cualquier línea donde se alla definido (dentro del scope de la función), si no se <br>
+        encuentra dentro de ninguna función entonces se declara en el scope global, puede ser modificada <br>
+        dentro del scope de la función/global desde el inicio del mismo, la primera inicialización debe <br>
+        ser con var, puede ser inicializada con var varias veces, una por cada scope local que esté  <br>
+        contenido dentro del scope de la función/global. <br>
+   </p>
+   <br>
+   <p>
+        <strong>let:</strong> se declara dentro del scope local al momento de la ejecución de la línea, deja de estar disponible <br>
+        cuando termina el scope local, se puede modificar dentro del scope local, a partir de la línea en la que <br>
+        se declara. <br>
+   </p>
+   <p>
+        <strong>const:</strong> se declara dentro del scope local al momento de la ejecución de la línea, deja de estar disponible <br>
+        cuando termina el scope local, no puede ser modificada una vez declarada. <br>
+   </p>
+
+
+
+
+
+
+    <a href="https://platzi.com/clases/1339-fundamentos-javascript/12974-var-let-y-const-las-diferencias-entre-ellos/">Ver Clase</a>
+    
+</body>
+</html>
